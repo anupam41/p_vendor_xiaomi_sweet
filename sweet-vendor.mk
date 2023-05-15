@@ -89,13 +89,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sweet/proprietary/vendor/etc/configstore/vpp.configstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/configstore/vpp.configstore.xml \
     vendor/xiaomi/sweet/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
     vendor/xiaomi/sweet/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
-    vendor/xiaomi/sweet/proprietary/vendor/etc/elliptic_sensor.xml:null/etc/elliptic_sensor.xml \
+    vendor/xiaomi/sweet/proprietary/vendor/etc/elliptic_sensor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/elliptic_sensor.xml \
     vendor/xiaomi/sweet/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
-    vendor/xiaomi/sweet/proprietary/vendor/etc/init/init.batterysecret.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.batterysecret.rc \
-    vendor/xiaomi/sweet/proprietary/vendor/etc/init/init.mi_thermald.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mi_thermald.rc \
-    vendor/xiaomi/sweet/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
-    vendor/xiaomi/sweet/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
-    vendor/xiaomi/sweet/proprietary/vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
@@ -109,7 +104,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/imsdatadaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdatadaemon.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/imsqmidaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsqmidaemon.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/imsrcsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsrcsd.rc \
+    vendor/xiaomi/sweet/proprietary/vendor/etc/init/init.batterysecret.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.batterysecret.rc \
+    vendor/xiaomi/sweet/proprietary/vendor/etc/init/init.mi_thermald.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mi_thermald.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
+    vendor/xiaomi/sweet/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/ipa_fws.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipa_fws.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
@@ -123,6 +121,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
+    vendor/xiaomi/sweet/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
+    vendor/xiaomi/sweet/proprietary/vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
     vendor/xiaomi/sweet/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
     vendor/xiaomi/sweet/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
@@ -379,7 +379,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sweet/proprietary/vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so \
     vendor/xiaomi/sweet/proprietary/vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so \
     vendor/xiaomi/sweet/proprietary/vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.citsensorservice@1.1_vendor.so \
-    vendor/xiaomi/sweet/proprietary/vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
+    vendor/xiaomi/sweet/proprietary/vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so \
     vendor/xiaomi/sweet/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
     vendor/xiaomi/sweet/proprietary/vendor/radio/qcril_database/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/0_initial.sql \
     vendor/xiaomi/sweet/proprietary/vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/10_version_update_ecc_table.sql \
@@ -428,11 +428,14 @@ PRODUCT_PACKAGES += \
     libqmi_csi \
     libqmi_encdec \
     libqmiservices \
+    libswvdec \
     libvpphvx \
     libvpplibrary \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
+    btaudio_offload_if \
+    audio.primary.sm6150 \
     vendor.qti.hardware.bluetooth_audio@2.1-impl \
     libMpeg4SwEncoder \
     libOmxAacDec \
@@ -449,14 +452,28 @@ PRODUCT_PACKAGES += \
     libOmxSwVencMpeg4 \
     libOmxVpp \
     libOmxWmaDec \
+    liba2dpoffload \
+    libacdb-fts \
+    libacdbloader \
+    libacdbrtac \
+    libadiertac \
     libadpcmdec \
+    libaudcal \
+    libaudio_log_utils \
+    libaudioparsers \
+    libaudioroute_ext \
     libbluetooth_audio_session_qti \
     libbluetooth_audio_session_qti_2_1 \
     libdsd2pcm \
+    libhdmiedid \
+    libhfp \
+    libpn553_fw \
     libqcodec2 \
+    libqtigef \
     librice \
     libsmwrapper \
-    libswvdec \
+    libsndmonitor \
+    libspkrprot \
     libvppclient \
     capi_v2_aptX_CLHDAD_Encoder \
     capi_v2_aptX_Classic \
@@ -483,6 +500,70 @@ PRODUCT_PACKAGES += \
     libasphere \
     libmisoundfx \
     libshoebox \
+    libxlog \
+    com.qti.sensor.sweet_gc02m1 \
+    com.qti.sensor.sweet_imx355 \
+    com.qti.sensor.sweet_imx471_front \
+    com.qti.sensor.sweet_ov02b1b \
+    com.qti.sensor.sweet_ov5675_macro \
+    com.qti.sensor.sweet_s5kgw3 \
+    com.qti.sensor.sweet_s5khm2 \
+    com.altek.node.depurple \
+    com.altek.node.distortioncorrection \
+    com.arcsoft.node.capturebokeh \
+    com.arcsoft.node.deflicker \
+    com.arcsoft.node.distortioncorrection \
+    com.arcsoft.node.hdr \
+    com.arcsoft.node.hdrchecker \
+    com.arcsoft.node.realtimebokeh \
+    com.arcsoft.node.skinbeautifier \
+    com.arcsoft.node.smoothtransition \
+    com.arcsoft.node.superlowlightraw \
+    com.mi.node.aiasd \
+    com.qti.camx.chiiqutils \
+    com.qti.eisv2 \
+    com.qti.eisv3 \
+    com.qti.hvx.addconstant \
+    com.qti.hvx.binning \
+    com.qti.node.depth \
+    com.qti.node.dummyrtb \
+    com.qti.node.dummysat \
+    com.qti.node.eisv2 \
+    com.qti.node.eisv3 \
+    com.qti.node.fcv \
+    com.qti.node.gpu \
+    com.qti.node.memcpy \
+    com.qti.node.remosaic \
+    com.qti.node.stich \
+    com.qti.node.swregistration \
+    com.qti.node.watermark \
+    com.qti.node.xiaomigenderage \
+    com.qti.stats.aec \
+    com.qti.stats.af \
+    com.qti.stats.afd \
+    com.qti.stats.asd \
+    com.qti.stats.awb \
+    com.qti.stats.awbwrapper \
+    com.qti.stats.haf \
+    com.qti.stats.hafoverride \
+    com.qti.stats.localhistogram \
+    com.qti.stats.pdlib \
+    com.qti.stats.pdlibsony \
+    com.qti.stats.pdlibwrapper \
+    com.qtistatic.stats.aec \
+    com.qtistatic.stats.af \
+    com.qtistatic.stats.awb \
+    com.qtistatic.stats.pdlib \
+    com.vidhance.node.eis \
+    com.vidhance.stats.aec_dmbr \
+    com.visidon.node.clearshot \
+    com.xiaomi.node.mibokeh \
+    com.xiaomi.node.mifilter \
+    com.xiaomi.node.mifragment \
+    com.xiaomi.node.mimovie \
+    com.xiaomi.node.misegment \
+    libdepthmapwrapper \
+    libmmcamera_cac3 \
     com.qualcomm.qti.dpm.api@1.0_vendor \
     com.qualcomm.qti.imscmservice@2.0 \
     com.qualcomm.qti.imscmservice@2.1 \
@@ -493,7 +574,11 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.3 \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
+    camera.qcom \
     com.dsi.ant@1.0-impl \
+    com.qti.chi.override \
+    consumerir.sm6150 \
+    fingerprint.fpc.sm6150 \
     vendor.qti.gnss@4.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.bluetooth_sar@1.1-impl \
@@ -516,18 +601,53 @@ PRODUCT_PACKAGES += \
     lib-siputility \
     lib-uceservice \
     libCB \
+    libFaceGrade \
     libGPreqcancel \
     libGPreqcancel_svc \
+    libFaceDetectpp-0.5.2 \
     libOpenCL \
+    libPSNPE \
     libQSEEComAPI \
+    libSNPE \
+    libVDClearShot \
+    libXMFD_AgeGender \
+    lib_sr_models \
+    libalCFR \
+    libalLDC \
+    libalhLDC \
+    libarcsoft_beautyshot \
+    libarcsoft_distortion_correction \
+    libarcsoft_dualcam_refocus \
+    libarcsoft_dualcam_refocus_front \
+    libarcsoft_dualcam_refocus_rear_t \
+    libarcsoft_dualcam_refocus_rear_w \
+    libarcsoft_hta \
+    libarcsoft_portrait_lighting \
+    libarcsoft_portrait_lighting_c \
+    libarcsoft_preview_deflicker \
+    libarcsoft_super_night_raw \
+    libbeauty_face_interface \
     libbtnv \
+    libc++_shared \
     libcacertclient \
+    libcamera_dirty \
+    libcamera_nn_stub \
+    libcamera_scene \
+    libcamxfdalgov7 \
+    libcamxfdalgov8 \
+    libcamxfdengine \
+    libcamxstatscore \
+    libcamxswprocessalgo \
+    libcamxtintlessalgo \
+    libcapiv2svacnn \
+    libcapiv2vop \
     libcdfw \
     libcdfw_remote_api \
     libcdsprpc \
     libcne \
     libcneapiclient \
     libcneoplookup \
+    libcom.qti.chinodeutils \
     libconfigdb \
     libcpion \
     libdataitems \
@@ -536,11 +656,16 @@ PRODUCT_PACKAGES += \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
+    libdualcam_optical_zoom_control \
+    libdualcam_video_optical_zoom \
+    libft2vendor \
     libgdtap \
     libhdcpsrm \
     libhdr_tm \
     libhexagon_nn_stub \
+    libhta \
     libhta_hexagon_runtime \
+    libhvx_interface \
     libizat_client_api \
     libizat_core \
     libjnihelper \
@@ -558,13 +683,26 @@ PRODUCT_PACKAGES += \
     liblowi_wifihal \
     liblqe \
     libmdsprpc \
+    libfacedet \
+    libmiai_portraitsupernight \
+    libmialgo_fs \
+    libmialgo_ie_capture \
+    libmialgo_rfs \
+    libmialgo_sd \
+    libmialgo_utils \
+    libmialgoengine \
+    libmibokeh_712 \
     libminkdescriptor \
     libminksocket \
+    libmpbase_vendor \
+    libmulticam_image_optical_zoom \
+    libmulticam_video_optical_zoom \
     libnetmgr \
     libnetmgr_common \
     libnetmgr_nr_fusion \
     libnetmgr_rmnet_ext \
     libnlnetmgr \
+    libnotifyaudiohal \
     libnpu \
     libops \
     libpdmapper \
@@ -583,31 +721,65 @@ PRODUCT_PACKAGES += \
     libqsocket \
     libqtikeymaster4 \
     librcc \
+    librelight_only \
+    libremosaic_wrapper \
+    libremosaiclib \
     libril-qc-hal-qmi \
     libril-qc-logger \
     librilqmiservices \
     librpmb \
+    libsdk_sr \
     libsdm-color \
     libsdm-colormgr-algo \
     libsdm-diag \
     libsdm-disp-vndapis \
     libsdmextension \
     libsdsprpc \
+    libsensorcal \
+    libsensorndkbridge \
+    libsensorslog \
+    libsnpe_adsp \
+    libsnpe_dsp_domains \
+    libsnpe_dsp_domains_system \
+    libsnpe_dsp_domains_v2 \
+    libsnpe_dsp_domains_v2_system \
+    libsns_device_mode_stub \
+    libsns_fastRPC_util \
+    libsns_low_lat_stream_stub \
+    libsnsapi \
+    libsnsdiaglog \
     libsoc_helper \
+    libssc \
+    libssc_default_listener \
+    libssccalapi \
     libssd \
+    libswregistrationalgo \
+    libsymphony-cpu \
     libsystem_health_mon \
+    libthermalclient \
     libtime_genoff \
     libtinyxml2_1 \
+    libtriplecam_video_optical_zoom \
     libtrustedapploader \
+    libultrasound \
+    libvideofilter_only \
+    libvidhance \
     libwms \
     libwqe \
     libwvhidl \
+    libxmi_hdr_checker \
+    libxmi_high_dynamic_range \
     libxml \
+    libxml2_vendor \
     libxtadapter \
     libwvdrmengine \
     qcrild_librilutils \
     qtibus \
     qtimutex \
+    sensors.elliptic \
+    sensors.mius.proximity \
+    sensors.ssc \
+    sensors.touch \
     unnhal-acc-adreno \
     unnhal-acc-common \
     unnhal-acc-hta \
@@ -725,6 +897,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss@4.0-service \
     adpl \
     adsprpcd \
+    batterysecret \
     cdsprpcd \
     cnd \
     cnss-daemon \
@@ -748,6 +921,7 @@ PRODUCT_PACKAGES += \
     irsc_util \
     loc_launcher \
     lowi-server \
+    mi_thermald \
     msm_irqbalance \
     netmgrd \
     nv_mac \
@@ -759,184 +933,11 @@ PRODUCT_PACKAGES += \
     qseecomd \
     qti \
     rmt_storage \
+    sensors.qti \
     slim_daemon \
     tftp_server \
+    thermal-engine \
     time_daemon \
     vppservice \
     xtra-daemon \
-    dpmd \
-    btaudio_offload_if \
-    audio.primary.sm6150 \
-    liba2dpoffload \
-    libacdb-fts \
-    libacdbloader \
-    libacdbrtac \
-    libadiertac \
-    libaudcal \
-    libaudio_log_utils \
-    libaudioparsers \
-    libaudioroute_ext \
-    libhdmiedid \
-    libhfp \
-    libpn553_fw \
-    libqtigef \
-    libsndmonitor \
-    libspkrprot \
-    libxlog \
-    com.qti.sensor.sweet_gc02m1 \
-    com.qti.sensor.sweet_imx355 \
-    com.qti.sensor.sweet_imx471_front \
-    com.qti.sensor.sweet_ov02b1b \
-    com.qti.sensor.sweet_ov5675_macro \
-    com.qti.sensor.sweet_s5kgw3 \
-    com.qti.sensor.sweet_s5khm2 \
-    com.altek.node.depurple \
-    com.altek.node.distortioncorrection \
-    com.arcsoft.node.capturebokeh \
-    com.arcsoft.node.deflicker \
-    com.arcsoft.node.distortioncorrection \
-    com.arcsoft.node.hdr \
-    com.arcsoft.node.hdrchecker \
-    com.arcsoft.node.realtimebokeh \
-    com.arcsoft.node.skinbeautifier \
-    com.arcsoft.node.smoothtransition \
-    com.arcsoft.node.superlowlightraw \
-    com.mi.node.aiasd \
-    com.qti.camx.chiiqutils \
-    com.qti.eisv2 \
-    com.qti.eisv3 \
-    com.qti.hvx.addconstant \
-    com.qti.hvx.binning \
-    com.qti.node.depth \
-    com.qti.node.dummyrtb \
-    com.qti.node.dummysat \
-    com.qti.node.eisv2 \
-    com.qti.node.eisv3 \
-    com.qti.node.fcv \
-    com.qti.node.gpu \
-    com.qti.node.memcpy \
-    com.qti.node.remosaic \
-    com.qti.node.stich \
-    com.qti.node.swregistration \
-    com.qti.node.watermark \
-    com.qti.node.xiaomigenderage \
-    com.qti.stats.aec \
-    com.qti.stats.af \
-    com.qti.stats.afd \
-    com.qti.stats.asd \
-    com.qti.stats.awb \
-    com.qti.stats.awbwrapper \
-    com.qti.stats.haf \
-    com.qti.stats.hafoverride \
-    com.qti.stats.localhistogram \
-    com.qti.stats.pdlib \
-    com.qti.stats.pdlibsony \
-    com.qti.stats.pdlibwrapper \
-    com.qtistatic.stats.aec \
-    com.qtistatic.stats.af \
-    com.qtistatic.stats.awb \
-    com.qtistatic.stats.pdlib \
-    com.vidhance.node.eis \
-    com.vidhance.stats.aec_dmbr \
-    com.visidon.node.clearshot \
-    com.xiaomi.node.mibokeh \
-    com.xiaomi.node.mifilter \
-    com.xiaomi.node.mifragment \
-    com.xiaomi.node.mimovie \
-    com.xiaomi.node.misegment \
-    libdepthmapwrapper \
-    libmmcamera_cac3 \
-    camera.qcom \
-    com.qti.chi.override \
-    consumerir.sm6150 \
-    fingerprint.fpc.sm6150 \
-    libFaceGrade \
-    libFaceDetectpp-0.5.2 \
-    libPSNPE \
-    libSNPE \
-    libVDClearShot \
-    libXMFD_AgeGender \
-    lib_sr_models \
-    libalCFR \
-    libalLDC \
-    libalhLDC \
-    libarcsoft_beautyshot \
-    libarcsoft_distortion_correction \
-    libarcsoft_dualcam_refocus \
-    libarcsoft_dualcam_refocus_front \
-    libarcsoft_dualcam_refocus_rear_t \
-    libarcsoft_dualcam_refocus_rear_w \
-    libarcsoft_hta \
-    libarcsoft_portrait_lighting \
-    libarcsoft_portrait_lighting_c \
-    libarcsoft_preview_deflicker \
-    libarcsoft_super_night_raw \
-    libbeauty_face_interface \
-    libc++_shared \
-    libcamera_dirty \
-    libcamera_nn_stub \
-    libcamera_scene \
-    libcamxfdalgov7 \
-    libcamxfdalgov8 \
-    libcamxfdengine \
-    libcamxstatscore \
-    libcamxswprocessalgo \
-    libcamxtintlessalgo \
-    libcapiv2svacnn \
-    libcapiv2vop \
-    libcom.qti.chinodeutils \
-    libdualcam_optical_zoom_control \
-    libdualcam_video_optical_zoom \
-    libft2vendor \
-    libhta \
-    libhvx_interface \
-    libfacedet \
-    libmiai_portraitsupernight \
-    libmialgo_fs \
-    libmialgo_ie_capture \
-    libmialgo_rfs \
-    libmialgo_sd \
-    libmialgo_utils \
-    libmialgoengine \
-    libmibokeh_712 \
-    libmpbase_vendor \
-    libmulticam_image_optical_zoom \
-    libmulticam_video_optical_zoom \
-    libnotifyaudiohal \
-    liboemcrypto \
-    librelight_only \
-    libremosaic_wrapper \
-    libremosaiclib \
-    libsdk_sr \
-    libsensorslog \
-    libsnpe_adsp \
-    libsnpe_dsp_domains \
-    libsnpe_dsp_domains_system \
-    libsnpe_dsp_domains_v2 \
-    libsnpe_dsp_domains_v2_system \
-    libsns_device_mode_stub \
-    libsns_fastRPC_util \
-    libsns_low_lat_stream_stub \
-    libsnsapi \
-    libsnsdiaglog \
-    libssc \
-    libssccalapi \
-    libswregistrationalgo \
-    libswvdec \
-    libsymphony-cpu \
-    libthermalclient \
-    libtriplecam_video_optical_zoom \
-    libultrasound \
-    libvideofilter_only \
-    libvidhance \
-    libxmi_hdr_checker \
-    libxmi_high_dynamic_range \
-    libxml2_vendor \
-    sensors.elliptic \
-    sensors.mius.proximity \
-    sensors.ssc \
-    sensors.touch \
-    batterysecret \
-    mi_thermald \
-    sensors.qti \
-    thermal-engine
+    dpmd
